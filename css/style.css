@@ -16,10 +16,21 @@
     border: none;
     border-radius: 5px;
 }
+.bottone_panna {
+    background-color: #FDF0EA;
+    padding: 8px 30px;
+    color: #EF6F31;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
 .font_artist {
     font-size: 40px;
     font-family: 'Pinyon Script', cursive;
     color: #6AC5F1;
+}
+.xflex {
+    display: flex;
 }
 
 /* proprieta' selettive */
@@ -54,7 +65,7 @@ nav > div:first-child img {
 header {
     position: relative;
     background-color: #FBF9F6;
-    min-height: 730px;
+    min-height: 740px;
 }
 /* immagini sx */
 header > .sx img:first-child {
@@ -136,4 +147,84 @@ header > .dx img:nth-child(5) {
     position: absolute;
     right: 210px;
     top: 245px;
+}
+
+/* main */
+/* prima sezione */
+.prima_righa {
+    text-align: center;
+    margin: 70px 0;
+}
+section:nth-child(1) {
+    position: relative;
+    background-image: url(../img/maxcoach-shape-14.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+main .container.xflex {
+    justify-content: center;
+}
+main .container.xflex > div {
+    margin: 0 15px;
+    line-height: 28px;
+}
+.img_prima_section img:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: 130px;
+}
+.img_prima_section img:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* seconda sezione */
+section:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+}
+section:nth-child(2) > div {
+    margin: 0 50px;
+}
+section:nth-child(2) > div:first-child {
+    text-align: center;
+    font-size: 25px;
+}
+section:nth-child(2) > div:last-child {
+    margin-top: 50px;
+}
+section:nth-child(2) > div:last-child button {
+    margin-top: 40px;
+}
+section:nth-child(2) .font_artist {
+    margin-top: 15px;
+}
+
+/* terza sezione */
+section:nth-child(3) {
+    position: relative;
+    text-align: center;
+    height: 640px;
+}
+section:nth-child(3) > img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 310px;
+    z-index: 100;
+}
+section:nth-child(3) > img:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px 0;
+    z-index: 500;
+}
+section:nth-child(3) > img:nth-child(3) {
+    position: absolute;
+    bottom: 20px;
+    right: 220px;
+    z-index: 100;
 }

@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Roboto:wght@100;300&family=Tajawal:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
     <title>Progetto Artist</title>
 </head>
 
@@ -13,13 +16,19 @@
     <div id="root">
         <!-- parte pre-nav -->
         <div id="ticket">
-
+            <span>
+                Starts TOMORROW! Our biggest event of the year...
+            </span>
+            <span>
+                <i class="far fa-clock"></i> 00 : 00 : 00 : 00
+            </span>
+            <button>Get ticket</button>
         </div>
 
         <!-- nav piu' logo -->
         <nav>
             <div>
-
+                <img :src="logo" alt="">
             </div> <!--sx-->
             <div>
 
@@ -31,7 +40,20 @@
 
         <!-- intestazione -->
         <header>
-
+            <!-- img sx -->
+            <div class="sx">
+                <img src="img/artist-shape-02-768x415.png" alt="">
+                <img src="img/artist-shape-02-768x415.png" alt="">
+                <img src="img/artist-shape-03.png" alt="">
+                <img src="img/artist-hero-image-03.png" alt="">
+                <img src="img/artist-hero-image-02.jpg" alt="">
+                <img src="img/artist-hero-image-01.jpg" alt="">
+            </div>
+            <div class="dx">
+                <!-- img dx -->
+                <img src="img/artist-shape-01-600x577.png" alt="">
+                <img src="img/artist-shape-04.png" alt="">
+            </div>
         </header>
 
         <!-- struttura centrale -->

@@ -2,4 +2,84 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Tajawal', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* parte pre-nav */
+#ticket {
+    background-color: #F5F5F5;
+    padding: 13px 0;
+    text-align: center;
+}
+#ticket button {
+    background-color: #EF6F31;
+    padding: 5px 25px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#ticket > span:nth-child(2) {
+    margin: 0 30px;
+}
+
+/* nav e logo */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+nav > div:first-child img {
+    height: 25px;
+}
+
+/* intestazione */
+header {
+    position: relative;
+    background-color: #FBF9F6;
+    height: 750px;
+}
+/* immagini sx */
+header > .sx img:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+header > .sx img:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+header > .sx img:nth-child(3) {
+    position: absolute;
+    left: 0;
+    top: 130px;
+}
+header > .sx img:nth-child(4) {
+    position: absolute;
+    left: 460px;
+    top: 400px;
+}
+header > .sx img:nth-child(5) {
+    position: absolute;
+    left: 310px;
+    top: 100px;
+}
+header > .sx img:nth-child(6) {
+    position: absolute;
+    left: 130px;
+    top: 430px;
+}
+/* immagini dx */
+header > .dx img:first-child {
+    position: absolute;
+    right: 140px;
+    top: 0;
+}
+header > .dx img:nth-child(2) {
+    position: absolute;
+    right: 130px;
+    top: 100px;
 }

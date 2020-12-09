@@ -1,3 +1,4 @@
+/* Proprieta' generali */
 * {
     margin: 0;
     padding: 0;
@@ -7,20 +8,34 @@
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
 }
+.bottone_orange {
+    background-color: #EF6F31;
+    padding: 8px 30px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.font_artist {
+    font-size: 40px;
+    font-family: 'Pinyon Script', cursive;
+    color: #6AC5F1;
+}
 
+/* proprieta' selettive */
 /* parte pre-nav */
 #ticket {
     background-color: #F5F5F5;
     padding: 13px 0;
     text-align: center;
 }
-#ticket button {
+/* #ticket button {
     background-color: #EF6F31;
     padding: 5px 25px;
     color: white;
     border: none;
     border-radius: 5px;
-}
+} */
 #ticket > span:nth-child(2) {
     margin: 0 30px;
 }
@@ -39,7 +54,7 @@ nav > div:first-child img {
 header {
     position: relative;
     background-color: #FBF9F6;
-    height: 750px;
+    min-height: 730px;
 }
 /* immagini sx */
 header > .sx img:first-child {
@@ -59,19 +74,43 @@ header > .sx img:nth-child(3) {
 }
 header > .sx img:nth-child(4) {
     position: absolute;
-    left: 460px;
+    left: 430px;
     top: 400px;
 }
 header > .sx img:nth-child(5) {
     position: absolute;
-    left: 310px;
+    left: 280px;
     top: 100px;
 }
 header > .sx img:nth-child(6) {
     position: absolute;
-    left: 130px;
+    left: 105px;
     top: 430px;
 }
+/* parte cx */
+header > .cx {
+    max-width: 500px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* header > .cx > h2 {
+    font-size: 40px;
+    font-family: 'Pinyon Script', cursive;
+    color: #6AC5F1;
+} */
+header > .cx > h1 {
+    margin-bottom: 30px;
+}
+/* header > .cx > button {
+    background-color: #EF6F31;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+} */
 /* immagini dx */
 header > .dx img:first-child {
     position: absolute;
@@ -82,4 +121,19 @@ header > .dx img:nth-child(2) {
     position: absolute;
     right: 130px;
     top: 100px;
+}
+header > .dx img:nth-child(3) {
+    position: absolute;
+    right: 70px;
+    top: 505px;
+}
+header > .dx img:nth-child(4) {
+    position: absolute;
+    right: 335px;
+    top: 505px;
+}
+header > .dx img:nth-child(5) {
+    position: absolute;
+    right: 210px;
+    top: 245px;
 }

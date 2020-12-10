@@ -35,7 +35,16 @@
                 <img :src="logo" alt="">
             </div> <!--sx-->
             <div>
-
+                <ul>
+                    <li v-for='elementi, indice in arrayNav' @click='mostra(elementi, indice)'>
+                        {{elementi.key}} <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown" v-show='elementi.active'>
+                            <li v-for='item, index in arrayNav[indice].arrayKey'>
+                                {{item}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div> <!--cx-->
             <div>
 
@@ -89,9 +98,9 @@
 
                     <div>
                         <img src="img/artist-box-image-01.png" alt="">
-                        <h5>
+                        <h4>
                             Online Coures
-                        </h5>
+                        </h4>
                         <p>
                             Online art coaching now offers you a <br>
                             very powerful way to redesign you <br>
@@ -100,9 +109,9 @@
                     </div> <!--2 row-->
                     <div>
                         <img src="img/artist-box-image-02.png" alt="">
-                        <h5>
+                        <h4>
                             One to one
-                        </h5>
+                        </h4>
                         <p>
                             Online art coaching now offers you a <br>
                             very powerful way to redesign you <br>
@@ -111,9 +120,9 @@
                     </div> <!--3 row-->
                     <div>
                         <img src="img/artist-box-image-03.png" alt="">
-                        <h5>
+                        <h4>
                             Anywhere
-                        </h5>
+                        </h4>
                         <p>
                             Online art coaching now offers you a <br>
                             very powerful way to redesign you <br>
@@ -122,9 +131,9 @@
                     </div> <!--4 row-->
                     <div>
                         <img src="img/artist-box-image-04.png" alt="">
-                        <h5>
+                        <h4>
                             On Time
-                        </h5>
+                        </h4>
                         <p>
                             Online art coaching now offers you a <br>
                             very powerful way to redesign you <br>
@@ -173,21 +182,70 @@
                 <img src="img/maxcoach-shape-12.png" alt="">
             </section>
 
-            <!-- quarta sezione -->
+            <!-- quarta sezione carosello-->
             <section>
 
                 <div>
-
+                    <h2 class="font_artist">
+                        Testimonial
+                    </h2>
+                    <h2>
+                        Why do people love me?
+                    </h2>
                 </div> <!--1 row-->
-                <div>
-
+                <div id="carosello">
+                    <div>
+                        <h4>
+                            It's a choice of quality for people with special needs
+                        </h4>
+                        <p>
+                            I'm a very strict person so require everithing to be organized and neat. Then, be able to make things right and shine. MaxCoach guys just got me.
+                        </p>
+                        <img src="img/artist-testimonial-avatar-02.jpg" alt="">
+                        <div class="testimonial">
+                            <h5>
+                                Florence Themes
+                            </h5>
+                            <p>
+                                / Multimedia Admin
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>
+                            It's a choice of quality for people with special needs
+                        </h4>
+                        <p>
+                            I'm a very strict person so require everithing to be organized and neat. Then, be able to make things right and shine. MaxCoach guys just got me.
+                        </p>
+                        <img src="img/artist-testimonial-avatar-04.jpg" alt="">
+                        <div class="testimonial">
+                            <h5>
+                                Florence Themes
+                            </h5>
+                            <p>
+                                / Multimedia Admin
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>
+                            It's a choice of quality for people with special needs
+                        </h4>
+                        <p>
+                            I'm a very strict person so require everithing to be organized and neat. Then, be able to make things right and shine. MaxCoach guys just got me.
+                        </p>
+                        <img src="img/artist-testimonial-avatar-01.jpg" alt="">
+                        <div class="testimonial">
+                            <h5>
+                                Florence Themes
+                            </h5>
+                            <p>
+                                / Multimedia Admin
+                            </p>
+                        </div>
+                    </div>
                 </div> <!--2 row-->
-                <div>
-
-                </div> <!--3 row-->
-                <div>
-
-                </div> <!--4 row-->
 
             </section>
 
@@ -219,6 +277,21 @@
             </section>
 
             <!-- sesta sezione -->
+            <section>
+
+                <div>
+
+                </div> <!--1 row-->
+                <div>
+
+                </div> <!--2 row-->
+                <div>
+
+                </div> <!--3 row-->
+
+            </section>
+
+            <!-- settima sezione -->
             <section>
 
                 <div>

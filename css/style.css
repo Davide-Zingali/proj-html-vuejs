@@ -60,6 +60,20 @@ nav {
 nav > div:first-child img {
     height: 25px;
 }
+nav div:nth-child(2) > ul > li {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 16px;
+    padding: 0 28px;
+}
+.dropdown {
+    
+}
+.dropdown > li {
+    list-style: none;
+    padding: 5px;
+}
+
 
 /* intestazione */
 header {
@@ -207,7 +221,7 @@ section:nth-child(2) .font_artist {
 section:nth-child(3) {
     position: relative;
     text-align: center;
-    height: 640px;
+    min-height: 640px;
 }
 section:nth-child(3) > img:nth-child(1) {
     position: absolute;
@@ -227,4 +241,31 @@ section:nth-child(3) > img:nth-child(3) {
     bottom: 20px;
     right: 220px;
     z-index: 100;
+}
+
+/* quarta sezione */
+section:nth-child(4) {
+    background-color: #F4F0EF;
+}
+section:nth-child(4) > :first-child {
+    text-align: center;
+    margin-top: 40px;
+}
+#carosello {
+    display: flex;
+}
+#carosello img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+#carosello > div {
+    margin: 50px;
+    padding: 30px;
+    background-color: white;
+}
+.testimonial {
+    margin: 40px 0;
+    display: inline-block;
+    font-size: 14px;
 }

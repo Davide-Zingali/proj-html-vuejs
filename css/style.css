@@ -46,7 +46,12 @@
 li {
     list-style: none;
 }
-
+button:hover {
+    background-color: lightgray;
+}
+a:hover {
+    color: red;
+}
 
 /* ---------------------------- */
 #relative {
@@ -82,6 +87,7 @@ nav {
 nav a {
     color: gray;
     padding-right: 20px;
+    text-decoration: none;
 }
 nav > div:first-child img {
     height: 25px;

@@ -74,23 +74,24 @@ var app = new Vue({
     },
     methods: {
         mostra(elementi, indice) {
-            // var attivoSelezionato = this.arrayNav[indice].active;
-            // attivoSelezionato = true;
-
-            // this.arrayNav[indice].active = true;
-
-            if (this.arrayNav[indice].active = false) {
-                this.arrayNav[indice].active = true;
+            // condizione per espandere dropdown se la variabile active e' su true o false
+            if (elementi.active == false) {
+                elementi.active = true;
             } else {
-                this.arrayNav[indice].active = false;
+                elementi.active = false;
             }
+            // elemento dell'arrey che viene attivato
+            this.arrayNav[indice]
+            console.log(this.arrayNav[indice]);
 
-            // if (attivoSelezionato == true) {
-            //     this.active != attivoSelezionato = false
-            // } else {
-                
-            // }
-            // console.log(attivoSelezionato);
+            this.arrayNav.forEach(element => {
+                console.log(this.arrayNav[indice]);
+                if (this.arrayNav[indice] != Element) {
+                    this.active = true
+                } else {
+                    false
+                }
+            });
         }
     }
 });

@@ -32,6 +32,17 @@
 .xflex {
     display: flex;
 }
+.fa-circle.select {
+    color: black;
+    font-size: 14px;
+}
+.item_carosello.no_filtro {
+    filter: none;
+}
+.icone_ristrette {
+    font-size: 12px;
+    color: gray;
+}
 
 /* proprieta' selettive */
 /* parte pre-nav */
@@ -245,6 +256,7 @@ section:nth-child(3) > img:nth-child(3) {
 
 /* quarta sezione */
 section:nth-child(4) {
+    padding-top: 20px;
     background-color: #F4F0EF;
 }
 section:nth-child(4) > :first-child {
@@ -259,13 +271,101 @@ section:nth-child(4) > :first-child {
     border-radius: 50%;
     margin-right: 15px;
 }
-#carosello > div {
+.item_carosello {
     margin: 50px;
     padding: 30px;
     background-color: white;
+    filter: opacity(40%);
 }
 .testimonial {
-    margin: 40px 0;
+    margin-top: 40px;
     display: inline-block;
     font-size: 14px;
+}
+#cerchio {
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-circle {
+    font-size: 12px;
+    color: gray;
+    margin: 0 10px;
+}
+
+/* quinta sezione */
+section:nth-child(5) > div:first-child {
+    text-align: center;
+    margin: 80px 0 50px 0;
+}
+section:nth-child(5) > div:nth-child(2) {
+    width: 80%;
+    margin: 0 auto;
+}
+.box_pay img {
+    width: 100%;
+}
+.box_pay {
+    display: inline-block;
+    margin: 10px 10px 40px 10px;
+    width: calc(100% / 4 - 24px);
+    line-height: 25px;
+}
+.box_pay > div {
+    padding: 10px 15px;
+}
+.box_pay i {
+    margin-left: 8px;
+}
+.box_pay h3 {
+    color: red;
+    margin-bottom: 10px;
+}
+section:nth-child(5) > div:last-child {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* sesta sezione */
+section:nth-child(6) {
+    background-color: #F5F7FA;
+    background-image: url(../img/maxcoach-shape-03.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section:nth-child(6) > div:nth-child(1) {
+    text-align: center;
+    padding: 50px 0;
+}
+section:nth-child(6) > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+}
+.box_artist img {
+    width: 100%;
+}
+.box_artist {
+    background-color: white;
+    width: 300px;
+    margin: 0 30px;
+}
+.box_artist > div {
+    padding: 26px 15px;
+}
+section:nth-child(6) a {
+    text-decoration-color: lightgray;
+    color: #EF7333;
+}
+section:nth-child(6) > div:last-child {
+    text-align: center;
+    padding: 75px 0 50px 0;
+}
+section:nth-child(6) div:last-child > h4 {
+    display: inline;
+    color: gray;
 }

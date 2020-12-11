@@ -482,36 +482,86 @@
 
             </section>
             
+            <!-- pre-footer ottava sezione -->
+            <section>
+                <div id="pre_footer">
+                    <img src="img/artist-shape-color-paint-top-left-300x170.png" alt="">
+                    <div class="xflex">
+                        <h3>
+                            Newsletter to get <br>
+                            in touch
+                        </h3>
+                        <div>
+                            <input type="email" placeholder="You e-mail">
+                            <button><i class="fas fa-long-arrow-alt-right"></i></button>
+                        </div>
+                    </div>
+                    <img src="img/artist-shape-color-paint-bottom-right-300x153.png" alt="">
+                </div>
+            </section>
         </main>
-
-        <!-- footer piu' pre-footer -->
+        
+        <!-- footer -->
         <footer>
-            <!-- pre-footer -->
-            <div>
-
-            </div>
-
             <!-- parte centrale footer -->
             <div>
-
-                <div>
-
-                </div> <!--1 col-->
-                <div>
-
-                </div> <!--2 col-->
-                <div>
-
-                </div> <!--3 col-->
-                <div>
-
-                </div> <!--4 col-->
-
+                <!--1 col-->
+                <div class="col_footer">
+                    <h3>
+                        {{address.titolo}}
+                    </h3>
+                    <ul>
+                        <li v-for='item in address.arrayAddress'>
+                            {{item}}
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--2 col-->
+                <div class="col_footer">
+                    <h3>
+                        {{explore.titolo}}
+                    </h3>
+                    <ul>
+                        <li v-for='item in explore.arrayExplore'>
+                            <a :href="item.link">{{item.testo}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--3 col-->
+                <div class="col_footer">
+                    <h3>
+                        {{info.titolo}}
+                    </h3>
+                    <ul>
+                        <li v-for='item in info.arrayInfo'>
+                            <a :href="item.link">{{item.testo}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--4 col-->
+                <div class="col_footer">
+                    <h3>
+                        {{insta.titolo}} <span> <a href="#">{{insta.mail}}</a> </span>
+                    </h3>
+                    <ul class="xflex">
+                        <li v-for='item in insta.arrayInsta'>
+                            <img :src="item.url" alt="">
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <!-- parte inferiore footer -->
-            <div>
-
+            <div id='finale_footer'>
+                <p>
+                    2020 Maxcoach. All Rights Reserved
+                </p>
             </div>
 
         </footer>

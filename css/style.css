@@ -43,6 +43,24 @@
     font-size: 12px;
     color: gray;
 }
+li {
+    list-style: none;
+}
+
+
+/* ---------------------------- */
+#relative {
+    position: relative;
+}
+#posizionamento {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: inline-block;
+}
+
+/* ----------------------------- */
 
 /* proprieta' selettive */
 /* parte pre-nav */
@@ -51,13 +69,6 @@
     padding: 13px 0;
     text-align: center;
 }
-/* #ticket button {
-    background-color: #EF6F31;
-    padding: 5px 25px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-} */
 #ticket > span:nth-child(2) {
     margin: 0 30px;
 }
@@ -68,6 +79,10 @@ nav {
     justify-content: space-around;
     padding: 20px 0;
 }
+nav a {
+    color: gray;
+    padding-right: 20px;
+}
 nav > div:first-child img {
     height: 25px;
 }
@@ -76,15 +91,11 @@ nav div:nth-child(2) > ul > li {
     font-weight: 900;
     font-size: 16px;
     padding: 0 28px;
-}
-.dropdown {
-    
+    color: gray;
 }
 .dropdown > li {
-    list-style: none;
     padding: 5px;
 }
-
 
 /* intestazione */
 header {
@@ -132,21 +143,9 @@ header > .cx {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-/* header > .cx > h2 {
-    font-size: 40px;
-    font-family: 'Pinyon Script', cursive;
-    color: #6AC5F1;
-} */
 header > .cx > h1 {
     margin-bottom: 30px;
 }
-/* header > .cx > button {
-    background-color: #EF6F31;
-    color: white;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 3px;
-} */
 /* immagini dx */
 header > .dx img:first-child {
     position: absolute;

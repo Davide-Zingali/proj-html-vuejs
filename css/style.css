@@ -52,6 +52,9 @@ button:hover {
 a:hover {
     color: red;
 }
+nav h4:hover {
+    color: red;
+}
 
 /* ---------------------------- */
 #relative {

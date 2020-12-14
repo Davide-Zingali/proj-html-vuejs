@@ -31,23 +31,34 @@
 
         <!-- nav piu' logo -->
         <nav>
+            <!--sx-->
             <div>
                 <img :src="logo" alt="">
-            </div> <!--sx-->
+            </div>
+
+            <!--cx-->
             <div>
                 <ul>
                     <li v-for='elementi, indice in arrayNav' @click='mostra(elementi, indice)'>
                         <h4>
-                            {{elementi.key}} <i class="fas fa-chevron-down"></i>
+                            {{elementi.key}}
+
+                            <!-- arrow up e down che si alternano -->
+                            <i v-if='elementi.active' class="fas fa-chevron-up"></i>
+                            <i v-else class="fas fa-chevron-down"></i>
                         </h4>
-                        <ul class="dropdown" v-show='elementi.active' id="relative">
-                            <li v-for='item, index in arrayNav[indice].arrayKey' id="posizionamento">
-                                <a href="#">{{item}}</a>
-                            </li>
-                        </ul>
+                        <div id="relative">
+                            <ul class="dropdown" v-show='elementi.active' id="posizionamento">
+                                <li v-for='item, index in arrayNav[indice].arrayKey'>
+                                    <a href="#">{{item}}</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
-            </div> <!--cx-->
+            </div>
+
+            <!--dx-->
             <div>
                 <ul>
                     <li>
@@ -57,19 +68,19 @@
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                     </li>
                 </ul>
-            </div> <!--dx-->
+            </div>
         </nav>
 
         <!-- intestazione -->
-        <header>
-            <!-- img sx -->
+        <header @click='chiudi()'>
+            <!-- img sx in position absolute-->
             <div class="sx">
                 <img src="img/artist-shape-02-768x415.png" alt="">
                 <img src="img/artist-shape-02-768x415.png" alt="">
                 <img src="img/artist-shape-03.png" alt="">
                 <img src="img/artist-hero-image-03.png" alt="">
-                <img src="img/artist-hero-image-02.jpg" alt="">
-                <img src="img/artist-hero-image-01.jpg" alt="">
+                <img class="shadown" src="img/artist-hero-image-02.jpg" alt="">
+                <img class="shadown" src="img/artist-hero-image-01.jpg" alt="">
             </div>
             <!-- testo centrale -->
             <div class="cx">
@@ -77,13 +88,13 @@
                 <h1>Artist Coaching And Mentoring Might Be for You.</h1>
                 <button class="bottone_orange">Get started today</button>
             </div>
+            <!-- img dx in position absolute-->
             <div class="dx">
-                <!-- img dx -->
                 <img src="img/artist-shape-01-600x577.png" alt="">
                 <img src="img/artist-shape-04.png" alt="">
                 <img src="img/artist-shape-05.png" alt="">
                 <img src="img/maxcoach-shape-12.png" alt="">
-                <img src="img/artist-hero-image-04.jpg" alt="">
+                <img class="shadown" src="img/artist-hero-image-04.jpg" alt="">
             </div>
         </header>
 
@@ -102,6 +113,7 @@
                         I can help you with
                     </h2>
                 </div> <!--1 row-->
+
                 <!-- contenitore colonne -->
                 <div class="container xflex">
 
@@ -151,7 +163,8 @@
                     </div> <!--5 row-->
 
                 </div>
-                <!-- contenitore di immagini -->
+                
+                <!-- contenitore di immagini in position absolute per sfondo prima section -->
                 <div class="img_prima_section">
                     <img src="img/meta'-maxcoach-shape-13-150x150.png" alt="">
                     <img src="img/meta'-artist-shape-01-600x577.png" alt="">
@@ -203,7 +216,8 @@
                     </h2>
                 </div> <!--1 row-->
 
-                <div id="carosello">
+                <!-- carosello -->
+                <div id="carosello" v-show='mostraCarosello1'>
                     <!-- sx -->
                     <div class="item_carosello">
                         <h4>
@@ -223,7 +237,7 @@
                         </div>
                     </div>
                     <!-- cx -->
-                    <div class="item_carosello no_filtro">
+                    <div class="item_carosello">
                         <h4>
                             It's a choice of quality for people with special needs
                         </h4>
@@ -260,9 +274,72 @@
                     </div>
                 </div> <!--2 row-->
 
+
+
+                <!-- carosello 2 -->
+                <div id="carosello" v-show='mostraCarosello2'>
+                    <!-- sx -->
+                    <div class="item_carosello">
+                        <h4>
+                            A choice of quality for people with special
+                        </h4>
+                        <p>
+                            Very strict person so require everithing to be organized and neat. Then, be able to make things right and shine. MaxCoach guys just got
+                        </p>
+                        <img src="img/artist-testimonial-avatar-03.jpg" alt="">
+                        <div class="testimonial">
+                            <h5>
+                                Florence Themes
+                            </h5>
+                            <p>
+                                / Multimedia Admin
+                            </p>
+                        </div>
+                    </div>
+                    <!-- cx -->
+                    <div class="item_carosello">
+                        <h4>
+                            Choice of quality for people with special
+                        </h4>
+                        <p>
+                            Strict person so require everithing to be organized and neat. Then, be able to make things right and shine. MaxCoach guys.
+                        </p>
+                        <img src="img/artist-testimonial-avatar-03.jpg" alt="">
+                        <div class="testimonial">
+                            <h5>
+                                Florence Themes
+                            </h5>
+                            <p>
+                                / Multimedia Admin
+                            </p>
+                        </div>
+                    </div>
+                    <!-- dx -->
+                    <div class="item_carosello">
+                        <h4>
+                            Quality for people with special
+                        </h4>
+                        <p>
+                            Person so require everithing to be organized and neat. Then, be able to make things right and shine. MaxCoach guys.
+                        </p>
+                        <img src="img/artist-testimonial-avatar-03.jpg" alt="">
+                        <div class="testimonial">
+                            <h5>
+                                Florence Themes
+                            </h5>
+                            <p>
+                                / Multimedia Admin
+                            </p>
+                        </div>
+                    </div>
+                </div> <!--2 row-->
+
+
+
+
                 <div id="cerchio">
-                    <i class="fas fa-circle select"></i>
-                    <i class="fas fa-circle"></i>
+                    <i @click='cambioCarosello1()' class="fas fa-circle" :class="newSelect1"></i>
+                    <i @click='cambioCarosello2()' class="fas fa-circle" :class="newSelect2"></i>
                     <i class="fas fa-circle"></i>
                     <i class="fas fa-circle"></i>
                 </div> <!--3 row-->
@@ -574,7 +651,9 @@
             </div>
 
         </footer>
-
+        
+        <!-- scroll su -->
+        <button id='torna_su' @click='scroll()'><i class="fas fa-arrow-alt-circle-up"></i></button>
     </div>
 
     <!-- script js -->

@@ -55,7 +55,19 @@ a:hover {
 nav h4:hover {
     color: red;
 }
-
+#torna_su {
+    background: none;
+    border: none;
+    font-size: 50px;
+    color:  #EF6F31;
+    position: fixed;
+    bottom: 1px;
+    right: 8px;
+    z-index: 950;
+}
+.shadown {
+    box-shadow: 0px 0px 10px 8px lightgray;
+}
 /* ---------------------------- */
 #relative {
     position: relative;
@@ -66,6 +78,8 @@ nav h4:hover {
     left: 0;
     background-color: white;
     display: inline-block;
+    z-index: 800;
+    box-shadow: 1px 1px 10px 1px lightgray;
 }
 
 /* ----------------------------- */
@@ -87,7 +101,7 @@ nav {
     justify-content: space-around;
     padding: 20px 0;
 }
-nav a {
+nav > div:last-child a {
     color: gray;
     padding-right: 20px;
     text-decoration: none;
@@ -95,7 +109,7 @@ nav a {
 nav > div:first-child img {
     height: 25px;
 }
-nav div:nth-child(2) > ul > li {
+nav > div:nth-child(2) > ul > li {
     display: inline-block;
     font-weight: 900;
     font-size: 16px;
@@ -103,7 +117,17 @@ nav div:nth-child(2) > ul > li {
     color: gray;
 }
 .dropdown > li {
-    padding: 5px;
+    margin: 10px;
+    text-decoration: none;
+    min-width: 100px;
+    text-align: center;
+}
+.dropdown a {
+    text-decoration: none;
+}
+.dropdown {
+    margin: 10px 0;
+    line-height: 30px;
 }
 
 /* intestazione */
@@ -112,6 +136,7 @@ header {
     background-color: #FBF9F6;
     min-height: 740px;
 }
+
 /* immagini sx */
 header > .sx img:first-child {
     position: absolute;
@@ -143,6 +168,7 @@ header > .sx img:nth-child(6) {
     left: 105px;
     top: 430px;
 }
+
 /* parte cx */
 header > .cx {
     max-width: 500px;
@@ -155,6 +181,7 @@ header > .cx {
 header > .cx > h1 {
     margin-bottom: 30px;
 }
+
 /* immagini dx */
 header > .dx img:first-child {
     position: absolute;
@@ -284,6 +311,9 @@ section:nth-child(4) > :first-child {
     padding: 30px;
     background-color: white;
     filter: opacity(40%);
+}
+.item_carosello:hover {
+    filter: opacity(100%);
 }
 .testimonial {
     margin-top: 40px;
@@ -418,7 +448,7 @@ section:nth-child(7) {
     border: none;
     color: white;
     font-size: 16px;
-    min-width: 600px;
+    min-width: 500px;
 }
 #pre_footer .xflex > div button {
     background-color: #244186;
